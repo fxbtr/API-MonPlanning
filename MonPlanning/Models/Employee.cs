@@ -16,5 +16,9 @@ namespace MonPlanning.Models
             firstName = _firstName;
             lastName = _lastName;
         }
+
+        public string FirstName => firstName;
+        public string LastName => lastName;
+        public int Id => id;
     }
 }
