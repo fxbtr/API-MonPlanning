@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MonPlanning.Models;
 
 namespace MonPlanning
 {
@@ -25,6 +26,19 @@ namespace MonPlanning
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ContexteDonnees contexte = new ContexteDonnees();
+            Employee genevieve = new Employee(1, "Genevieve", "Wrist");
+            Employee lu = new Employee(2, "Lu", "Barreau");
+            Employee janelle = new Employee(3, "Janelle", "Monae");
+            Employee drake = new Employee(4, "Aubrey Drake", "Graham");
+
+            contexte.AddEmployee(genevieve);
+            contexte.AddEmployee(lu);
+            contexte.AddEmployee(janelle);
+            contexte.AddEmployee(drake);
+
+            services.AddSingleton(contexte);
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
