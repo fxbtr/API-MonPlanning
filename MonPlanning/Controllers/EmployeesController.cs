@@ -20,9 +20,9 @@ namespace MonPlanning.Controllers
 
         // GET planning/employees
         [HttpGet]
-        public ActionResult<IEnumerable<int>> Get()
+        public ActionResult<IEnumerable<Employee>> Get()
         {
-            return data.EmployeeById.Keys.ToList();
+            return data.EmployeeById.Values.ToList();
         }
 
         // GET planning/employees/5
