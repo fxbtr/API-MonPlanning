@@ -27,6 +27,7 @@ namespace MonPlanning
         public void ConfigureServices(IServiceCollection services)
         {
             ContexteDonnees contexte = new ContexteDonnees();
+
             Employee genevieve = new Employee(1, "Genevieve", "Wrist");
             Employee lu = new Employee(2, "Lu", "Barreau");
             Employee janelle = new Employee(3, "Janelle", "Monae");
@@ -36,6 +37,32 @@ namespace MonPlanning
             contexte.AddEmployee(lu);
             contexte.AddEmployee(janelle);
             contexte.AddEmployee(drake);
+
+            Calendar janvier = new Calendar(1, "Janvier", 31);
+            Calendar fevrier = new Calendar(2, "Février", 28);
+            Calendar mars = new Calendar(3, "Mars", 31);
+            Calendar avril = new Calendar(4, "Avril", 30);
+            Calendar mai = new Calendar(5, "Mai", 31);
+            Calendar juin = new Calendar(6, "Juin", 30);
+            Calendar juillet = new Calendar(7, "Juillet", 31);
+            Calendar aout = new Calendar(8, "Août", 31);
+            Calendar septembre = new Calendar(9, "Septembre", 30);
+            Calendar octobre = new Calendar(10, "Octobre", 31);
+            Calendar novembre = new Calendar(11, "Novembre", 30);
+            Calendar decembre = new Calendar(12, "Décembre", 31);
+
+            contexte.AddMonth(janvier);
+            contexte.AddMonth(fevrier);
+            contexte.AddMonth(mars);
+            contexte.AddMonth(avril);
+            contexte.AddMonth(mai);
+            contexte.AddMonth(juin);
+            contexte.AddMonth(juillet);
+            contexte.AddMonth(aout);
+            contexte.AddMonth(septembre);
+            contexte.AddMonth(octobre);
+            contexte.AddMonth(novembre);
+            contexte.AddMonth(decembre);
 
             services.AddSingleton(contexte);
 
