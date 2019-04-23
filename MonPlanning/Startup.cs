@@ -64,6 +64,30 @@ namespace MonPlanning
             contexte.AddMonth(novembre);
             contexte.AddMonth(decembre);
 
+            DaysOption normal = new DaysOption(" ", "normal");
+            DaysOption absent = new DaysOption("Absent(e)", "absent");
+            DaysOption conge = new DaysOption("Congé", "conge");
+            DaysOption deplacement = new DaysOption("Déplacement", "deplacement");
+            DaysOption ferie = new DaysOption("Férié", "ferie");
+            DaysOption formation = new DaysOption("Formation", "formation");
+            DaysOption homeOffice = new DaysOption("Télétravail", "homeOffice");
+            DaysOption malade = new DaysOption("Malade", "malade");
+            DaysOption reunion = new DaysOption("Réunion", "reunion");
+            DaysOption rdv = new DaysOption("Rendez-vous", "rdv");
+            DaysOption weekend = new DaysOption("Week-end", "weekend");
+
+            contexte.AddOption(normal);
+            contexte.AddOption(absent);
+            contexte.AddOption(conge);
+            contexte.AddOption(deplacement);
+            contexte.AddOption(ferie);
+            contexte.AddOption(formation);
+            contexte.AddOption(homeOffice);
+            contexte.AddOption(malade);
+            contexte.AddOption(reunion);
+            contexte.AddOption(rdv);
+            contexte.AddOption(weekend);
+
             services.AddSingleton(contexte);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
