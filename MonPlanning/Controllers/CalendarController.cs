@@ -41,14 +41,14 @@ namespace MonPlanning.Controllers
         }
 
         // PUT: planning/Calendar/5
-        [HttpPut("{id}")]
+        [HttpPut("{code}")]
         public void Put(int id, [FromBody] string value)
         {
             //TODO
         }
 
         // DELETE: planning/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{code}")]
         public void Delete(int id)
         {
             //TODO
