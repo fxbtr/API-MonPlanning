@@ -7,9 +7,9 @@ namespace MonPlanning.Models
 {
     public class ContexteDonnees
     {
-        private Dictionary<int, Employee> employeesList;
-        private Dictionary<int, Calendar> months;
-        private Dictionary<string, DaysOption> optionsList;
+        readonly Dictionary<int, Employee> employeesList;
+        readonly Dictionary<int, Calendar> months;
+        readonly Dictionary<string, DaysOption> optionsList;
 
         public ContexteDonnees()
         {

@@ -12,7 +12,7 @@ namespace MonPlanning.Controllers
     [ApiController]
     public class DaysOptionController : ControllerBase
     {
-        private ContexteDonnees data;
+        readonly ContexteDonnees data;
 
         public DaysOptionController(ContexteDonnees _data)
         {
@@ -37,18 +37,21 @@ namespace MonPlanning.Controllers
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            //TODO
         }
 
         // PUT: api/DaysOption/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+            //TODO
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            //TODO
         }
     }
 }

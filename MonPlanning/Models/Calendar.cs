@@ -7,9 +7,9 @@ namespace MonPlanning.Models
 {
     public class Calendar
     {
-        private string month;
-        private int daysCount, code;
-        private int[] days;
+        readonly string month;
+        readonly int daysCount, code;
+        readonly int[] days;
 
         public Calendar(int _code, string _month, int _daysCount)
         {

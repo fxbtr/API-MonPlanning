@@ -7,8 +7,8 @@ namespace MonPlanning.Models
 {
     public class Employee
     {
-        private string firstName, lastName;
-        private int id;
+        readonly string firstName, lastName;
+        readonly int id;
 
         public Employee(int _id, string _firstName, string _lastName)
         {

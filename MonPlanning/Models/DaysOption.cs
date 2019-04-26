@@ -7,7 +7,7 @@ namespace MonPlanning.Models
 {
     public class DaysOption
     {
-        private string option, value;
+        readonly string option, value;
 
         public DaysOption(string _option, string _value)
         {

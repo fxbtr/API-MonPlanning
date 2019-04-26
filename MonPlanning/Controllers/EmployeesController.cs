@@ -11,7 +11,7 @@ namespace MonPlanning.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
-        private ContexteDonnees data;
+        readonly ContexteDonnees data;
 
         public EmployeesController(ContexteDonnees _data)
         {
@@ -36,18 +36,21 @@ namespace MonPlanning.Controllers
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            //TODO
         }
 
         // PUT planning/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+            //TODO
         }
 
         // DELETE planning/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            //TODO
         }
     }
 }

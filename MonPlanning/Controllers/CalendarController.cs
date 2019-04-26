@@ -12,7 +12,7 @@ namespace MonPlanning.Controllers
     [ApiController]
     public class CalendarController : ControllerBase
     {
-        private ContexteDonnees data;
+        readonly ContexteDonnees data;
 
         public CalendarController(ContexteDonnees _data)
         {
@@ -37,18 +37,21 @@ namespace MonPlanning.Controllers
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            //TODO
         }
 
         // PUT: planning/Calendar/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+            //TODO
         }
 
         // DELETE: planning/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            //TODO
         }
     }
 }
